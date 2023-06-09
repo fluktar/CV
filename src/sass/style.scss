@@ -25,7 +25,7 @@ body {
   width: 20vw;
   overflow: auto;
   background-color: var(--color-1);
-  box-shadow: 2px 2px 4px;
+  box-shadow: 2px 2px 4px rgba($color: #7a7878, $alpha: 1);
   .photo {
     display: flex;
     flex-direction: column;
@@ -74,6 +74,7 @@ body {
 }
 .right {
   width: 60vw;
+  box-shadow: 2px 2px 4px rgba($color: #6d6a6a, $alpha: 0.3);
   h1 {
     font-size: 2.4rem;
     margin: 3rem;
