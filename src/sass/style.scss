@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  font-family: "Lato", sans-serif;
+  font-size: 62.5%;
+}
+:root {
+  --text-color1: #000f08;
+  --text-color2: #ffffff;
+  --color-1: rgb(30, 41, 57);
+  --motto: rgb(179, 166, 164);
+  --color-3: tomato;
+}
+.left {
+  border: 1px solid black;
+  width: 20vw;
+  overflow: auto;
+  background-color: var(--color-1);
+  box-shadow: 2px 2px 4px;
+  .photo {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    img {
+      height: 340px auto;
+    }
+  }
+  .right_total {
+    .right_main_title {
+      font-size: 2rem;
+      margin: 1rem;
+      color: var(--text-color2);
+    }
+    .right_main_info {
+      margin: 1rem;
+      font-size: 1.5rem;
+      color: var(--text-color2);
+    }
+  }
+  .base_info {
+    .right_main_skill {
+      font-size: 1.5rem;
+      margin: 1rem;
+      color: var(--text-color2);
+    }
+    ul {
+      li {
+        margin: 0.5rem 1rem;
+        list-style-type: none;
+        font-size: 1rem;
+        color: var(--text-color2);
+      }
+    }
+    .right_main_title {
+      font-size: 1.5rem;
+      margin: 1rem;
+      color: var(--text-color2);
+    }
+  }
+}
+.right {
+  width: 60vw;
+  h1 {
+    font-size: 2.4rem;
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+  .property_title {
+    font-size: 1.5rem;
+    margin: 3rem;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 2rem;
+    display: flex;
+    margin: 1rem 3rem;
+  }
+  .main_info {
+    .motto {
+      color: var(--motto);
+      font-size: 1.2rem;
+      margin: 0 3rem;
+    }
+    .title_point {
+      font-size: 1.5rem;
+      margin: 0.5rem 3rem;
+    }
+    .title_company {
+      font-size: 1.3rem;
+      margin: 0.4rem 3rem;
+      span {
+        color: var(--color-3);
+      }
+    }
+    .time {
+      color: var(--motto);
+      font-size: 1.2rem;
+      margin: 0.5rem 3rem;
+    }
+
+    ul {
+      li {
+        font-size: 1.2rem;
+        margin: 0.3rem 6rem;
+      }
+    }
+  }
+  .school {
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin: 0.5rem 3rem;
+    }
+    .school_main {
+      font-weight: bold;
+      span{
+        color: var(--motto);
+      }
+    }
+    .school_title {
+      margin: 0 3rem;
+      font-size: 1.4rem;
+    }
+    .school_time {
+      color: var(--motto);
+      font-size: 1.2rem;
+      margin: 0.5rem 3rem;
+    }
+  }
+}
+footer {
+  display: none;
+}

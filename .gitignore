@@ -1,0 +1,9 @@
+# Ignorowane pliki i foldery
+	node_modules/
+	src/
+	html/
+	gulpfile.mjs
+	package.json
+	package-lock.json
+	*.log
+node_modules
