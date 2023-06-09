@@ -51,11 +51,16 @@ body {
       color: var(--text-color2);
     }
     ul {
+      list-style: none;
       li {
-        margin: 0.5rem 1rem;
-        list-style-type: none;
+        margin: 0.5rem 2rem;
         font-size: 1rem;
         color: var(--text-color2);
+      }
+      li:before {
+        content: "•";
+        padding-right: 10px;
+        color: var(--color-3);
       }
     }
     .right_main_title {
@@ -121,7 +126,7 @@ body {
     }
     .school_main {
       font-weight: bold;
-      span{
+      span {
         color: var(--motto);
       }
     }
