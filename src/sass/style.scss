@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+body {position: relative;
   width: 1200px;
   margin: auto;
   display: flex;
@@ -111,10 +111,16 @@ body {
       margin: 0.5rem 3rem;
     }
 
-    ul {
+    ul {list-style: none;
       li {
+        
         font-size: 1.2rem;
         margin: 0.3rem 6rem;
+      }
+      li:before {
+        content: "•";
+        padding-right: 10px;
+        color: var(--color-3);
       }
     }
   }
@@ -142,5 +148,10 @@ body {
   }
 }
 footer {
-  display: none;
+  position: absolute;
+  bottom: -6rem;
+  text-align: justify;
+  border: 1px solid green ;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
