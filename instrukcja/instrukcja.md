@@ -1,20 +1,20 @@
 # Instrukcja
 
-  ## Dodawanie plików zaimportowanych
+## Dodawanie plików zaimportowanych
 
-  Aby dodać plik zaimportowany, należy w `index.kit` dodać wpis `@@include('_nav.kit')`, a w utworzonym pliku dodać wpis np `<nav></nav>`.
+Aby dodać plik zaimportowany, należy w `index.kit` dodać wpis `@@include('_nav.kit')`, a w utworzonym pliku dodać wpis np `<nav></nav>`.
 
-  ## Sprawdzanie aktualizacji pakietów
+## Sprawdzanie aktualizacji pakietów
 
-  Aby sprawdzić aktualizacje pakietów i utworzyć plik z informacjami o aktualizacjach, wykonaj następujące kroki:
+Aby sprawdzić aktualizacje pakietów i utworzyć plik z informacjami o aktualizacjach, wykonaj następujące kroki:
 
-  1. Otwórz terminal w katalogu głównym projektu.
-  2. Wpisz polecenie `gulp checkPackageUpdates`.
-  3. Zadanie sprawdzi dostępne aktualizacje pakietów i wyświetli informacjami o aktualizacjach.
+1. Otwórz terminal w katalogu głównym projektu.
+2. Wpisz polecenie `gulp checkPackageUpdates`.
+3. Zadanie sprawdzi dostępne aktualizacje pakietów i wyświetli informacjami o aktualizacjach.
 
-  Pamiętaj, aby regularnie sprawdzać aktualizacje, aby utrzymać swoje zależności na bieżąco.
-  
- ## Tworzenie kopii zapasowej
+Pamiętaj, aby regularnie sprawdzać aktualizacje, aby utrzymać swoje zależności na bieżąco.
+
+## Tworzenie kopii zapasowej
 
 Aby utworzyć kopię zapasową folderów "dist", "html", "instrukcja", "src" oraz plików "gulpfile.mjs", ".gitignore" i "package.json", wykonaj następujące kroki:
 
@@ -24,13 +24,13 @@ Aby utworzyć kopię zapasową folderów "dist", "html", "instrukcja", "src" ora
 
 3. Wpisz w konsoli polecenie: gulp backup
 
-4. Kopia zostanie wykonana "Z:_www"
+4. Kopia zostanie wykonana "Z:\_www"
 5. w Katalogu głównym sprawdz plik nr.txt w którym będzie unikalny numer backup utworzonego dla twojej kopii
 6. Utworzona kopia będzie miała nazwę z tym numerem
 
 ## Pamiętaj o meta
 
-<meta
+<!-- <meta
       name="description"
       content="Jesteśmy młodym "
     />
@@ -39,7 +39,7 @@ Aby utworzyć kopię zapasową folderów "dist", "html", "instrukcja", "src" ora
       content="tworzenie stron www... "
     />
     <meta name="robots" content="index, follow">
-    <meta name="author" content="uroboros.online"></meta>
+    <meta name="author" content="uroboros.online"></meta> -->
 
 ## Kompresja obrazów za pomocą TinyPNG
 
@@ -54,7 +54,6 @@ Aby skorzystać z funkcji "compressImages", należy wykonać następujące kroki
 3. Uruchom zadanie Gulp, które kompresuje obrazy za pomocą TinyPNG. Otwórz terminal w katalogu głównym projektu i wpisz polecenie:
 
 gulp compressImages
-
 
 Skompresowane obrazy zostaną zapisane w folderze "dist/img".
 
@@ -87,4 +86,3 @@ watch - funkcja monitoruje zmiany we wszystkich plikach projektu i wywołuje odp
 checkPackageUpdates - funkcja sprawdza dostępne aktualizacje pakietów npm, a następnie tworzy plik "aktualizacja.txt" z informacjami o aktualizacjach.
 
 backupProject - funkcja tworzy kopię zapasową projektu, zapisując ją jako plik .zip w określonym katalogu.
-   
