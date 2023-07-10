@@ -32,6 +32,11 @@
             padding: 40px;
             border-radius: 10px;
         }
+
+        #errorDiv {
+            color: red;
+            display: none;
+        }
     </style>
 </head>
 
@@ -42,6 +47,8 @@
             <input type="text" id="username" name="username" style="font-size: 2rem;"><br>
             <label for="password" style="color: white; font-size: 2rem; margin: 1rem; padding: 1rem">Hasło:</label><br>
             <input type="password" id="password" name="password" style="font-size: 2rem;"><br>
+            <div id="errorDiv" style="font-size:2rem">Niepoprawny login. Proszę skontaktować się z właścicielem strony
+                pod adresem tyc.pawel@gmail.com</div><br>
             <input type="submit" value="Zaloguj"
                 style="margin: 2rem;font-size: 2rem;padding: 0.5rem; border-radius: 10px;">
         </form>
