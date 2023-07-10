@@ -6,21 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
     <title>CV</title>
     <link rel="stylesheet" href="/dist/css/style.min.css">
+    <style>
+        #loginForm {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            /* Czarny półprzezroczysty tło */
+            z-index: 9999;
+            /* Wyświetla formularz nad innymi elementami */
+        }
+
+        #loginForm form {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--color-1);
+            padding: 40px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body class="body">
+    <div id="loginForm">
+        <form onsubmit="return login(this)">
+            <label for="username" style="color: white; font-size: 2rem; margin: 1rem; padding: 1rem">Login:</label><br>
+            <input type="text" id="username" name="username" style="font-size: 2rem;"><br>
+            <label for="password" style="color: white; font-size: 2rem; margin: 1rem; padding: 1rem">Hasło:</label><br>
+            <input type="password" id="password" name="password" style="font-size: 2rem;"><br>
+            <input type="submit" value="Zaloguj"
+                style="margin: 2rem;font-size: 2rem;padding: 0.5rem; border-radius: 10px;">
+        </form>
+    </div>
     <div class="left">
         <div class="cointeiner photo">
-            <img src="/dist/img/photo.jpg" alt="CV photo" >
+            <img src="/dist/img/photo.jpg" alt="CV photo">
         </div>
         <div class="right_total">
             <div class="right_main_title">Kontakt</div>
             <div class="right_main_info">Tel: +48 788 33 62 34</div>
-            <div  class="right_main_info">E: tyc.pawel@gmail.com</div>
+            <div class="right_main_info">E: tyc.pawel@gmail.com</div>
         </div>
         <div class="cointeiner base_info">
             <div class="right_main_skill">Umiejętności</div>
@@ -38,7 +71,8 @@
                 </ul>
                 <ul>
                     <li>Umiejętności komputerowe</li>
-                    <li>HTML</li><li>PHP</li>
+                    <li>HTML</li>
+                    <li>PHP</li>
                     <li>SCSS/CSS</li>
                     <li>JavaScript</li>
                     <li>BootStramp</li>
@@ -66,32 +100,31 @@
         <p class="property_title">Property Manager</p>
         <h2>Paweł Tyc</h2>
         <div class="main_info">
-            <p class="motto">Ambitny, pomysłowy, zaangażowany w projekty z silnymi umiejętnościami organizacyjnymi. Gotowy do pomocy
-                zespołowi w osiągnięciu celów firmy. </p>
+            <p class="motto">Ambitny, pomysłowy, zaangażowany w projekty z silnymi umiejętnościami organizacyjnymi.
+                Gotowy do pomocy zespołowi w osiągnięciu celów firmy. </p>
             <div>
                 <div class="title_point">Doświadczenie zawodowe</div>
                 <h3 class="title_company">Manager Centrum Handlowego - <span> I.I.C. Retail sp. z o.o.</span></h3>
                 <p class="time">marzec 2021 - obecnie</p>
                 <p>
-                <ul><li>Współpracuję blisko z najemcami centrum handlowego, budując i utrzymując trwałe relacje oraz zapewniając szybką odpowiedź na ich potrzeby i rozwiązując ewentualne problemy.
-
-                    Jestem odpowiedzialny za tworzenie budżetów oraz kontrolę ich realizacji. Monitoruję wydatki, przeprowadzam analizy finansowe i wprowadzam korekty w celu optymalizacji kosztów.
-                    
-                    Realizuję strategię marketingową, planując i koordynując działania promocyjne, reklamowe i sprzedażowe, które zwiększają atrakcyjność centrum handlowego i przyciągają nowych klientów.
-                    
-                    Zarządzam zespołem pracowników, wspieram rozwój zawodowy członków zespołu, nadzoruję ich pracę i motywuję do osiągnięcia celów.
-                    
-                    Jako nadzorca działu FM, dbam o bieżące utrzymanie i zarządzanie infrastrukturą techniczną centrum handlowego.
-                    
-                    Organizuję przedsięwzięcia marketingowe, tworząc i realizując różnorodne kampanie i eventy mające na celu promocję centrum handlowego.
-                    
-                    Zajmuję się pozyskiwaniem nowych najemców - aktywnie poszukuję i nawiązuję kontakty z potencjalnymi najemcami, negocjuję warunki najmu oraz zawieram umowy.
-                    
-                    Biorę udział w prezentacji wolnych powierzchni handlowych dla potencjalnych najemców, pokazując im korzyści płynące z wynajmu przestrzeni w naszym centrum.
-                    
-                    Negocjuję nowe umowy i renegocjuję obowiązujące, dążąc do jak najbardziej korzystnych warunków dla naszego centrum handlowego.
-                    
-                    Kreuję pozytywny wizerunek centrum handlowego. Pracuję nad budowaniem silnej marki i reputacji, która przyciąga klientów i najemców.</li>
+                <ul>
+                    <li>Współpracuję blisko z najemcami centrum handlowego, budując i utrzymując trwałe relacje oraz
+                        zapewniając szybką odpowiedź na ich potrzeby i rozwiązując ewentualne problemy. Jestem
+                        odpowiedzialny za tworzenie budżetów oraz kontrolę ich realizacji. Monitoruję wydatki,
+                        przeprowadzam analizy finansowe i wprowadzam korekty w celu optymalizacji kosztów. Realizuję
+                        strategię marketingową, planując i koordynując działania promocyjne, reklamowe i sprzedażowe,
+                        które zwiększają atrakcyjność centrum handlowego i przyciągają nowych klientów. Zarządzam
+                        zespołem pracowników, wspieram rozwój zawodowy członków zespołu, nadzoruję ich pracę i motywuję
+                        do osiągnięcia celów. Jako nadzorca działu FM, dbam o bieżące utrzymanie i zarządzanie
+                        infrastrukturą techniczną centrum handlowego. Organizuję przedsięwzięcia marketingowe, tworząc i
+                        realizując różnorodne kampanie i eventy mające na celu promocję centrum handlowego. Zajmuję się
+                        pozyskiwaniem nowych najemców - aktywnie poszukuję i nawiązuję kontakty z potencjalnymi
+                        najemcami, negocjuję warunki najmu oraz zawieram umowy. Biorę udział w prezentacji wolnych
+                        powierzchni handlowych dla potencjalnych najemców, pokazując im korzyści płynące z wynajmu
+                        przestrzeni w naszym centrum. Negocjuję nowe umowy i renegocjuję obowiązujące, dążąc do jak
+                        najbardziej korzystnych warunków dla naszego centrum handlowego. Kreuję pozytywny wizerunek
+                        centrum handlowego. Pracuję nad budowaniem silnej marki i reputacji, która przyciąga klientów i
+                        najemców.</li>
                     <!-- <li>Współpraca z najemcami</li>
                     <li>Tworzenie budżetów i kontrola ich realizacji</li>
                     <li>Realizacja strategi marketingowej</li>
@@ -107,23 +140,23 @@
                 <h3 class="title_company">Kierownik technicznty <span>I.I.C. Retail sp z o.o.</span></h3>
                 <p class="time">styczeń 2020 - obecnie</p>
                 <p>
-                <ul><li>
-
-
-                    Jako menedżer techniczny centrum handlowego, miałem na celu zapewnienie niezawodnego i efektywnego funkcjonowania obiektu. Moje obowiązki obejmowały zarządzanie wszystkimi aspektami technicznymi, od konserwacji sprzętu po zarządzanie infrastrukturą i systemami budynku.
-
-                    Przy zarządzaniu kosztami - opex/capex, dbałem o skuteczną kontrolę budżetu, analizę wydatków operacyjnych i kapitałowych, a także optymalizację kosztów zgodnie z planem finansowym.
-                    
-                    Zapewnienie zgodności i realizacji inicjatyw na rzecz zrównoważonego rozwoju było kluczowym elementem mojej roli. Wdrażałem strategie mające na celu poprawę efektywności energetycznej, redukcję emisji CO2 i zminimalizowanie wpływu obiektu na środowisko.
-                    
-                    Brałem czynny udział w procesie inwestycyjnym najemców, współpracując z nimi w celu zrozumienia ich potrzeb i celów, a następnie koordynując i nadzorując realizację ich projektów inwestycyjnych.
-                    
-                    Zarządzanie najemcami i zapewnienie ich satysfakcji było jednym z moich głównych zadań. Budowałem i utrzymywałem solidne relacje z najemcami, zapewniając im odpowiednie wsparcie, rozwiązując problemy i dbając o ich potrzeby.
-                    
-                    Zarządzanie i nadzorowanie wszystkich codziennych czynności niezbędnych do utrzymania nieruchomości było istotnym elementem mojej roli. Dbałem o zapewnienie regularnej konserwacji, przeglądów i napraw, aby zapewnić ciągłość działania i długoterminową trwałość obiektu.
-
-
-                </li>
+                <ul>
+                    <li> Jako menedżer techniczny centrum handlowego, miałem na celu zapewnienie niezawodnego i
+                        efektywnego funkcjonowania obiektu. Moje obowiązki obejmowały zarządzanie wszystkimi aspektami
+                        technicznymi, od konserwacji sprzętu po zarządzanie infrastrukturą i systemami budynku. Przy
+                        zarządzaniu kosztami - opex/capex, dbałem o skuteczną kontrolę budżetu, analizę wydatków
+                        operacyjnych i kapitałowych, a także optymalizację kosztów zgodnie z planem finansowym.
+                        Zapewnienie zgodności i realizacji inicjatyw na rzecz zrównoważonego rozwoju było kluczowym
+                        elementem mojej roli. Wdrażałem strategie mające na celu poprawę efektywności energetycznej,
+                        redukcję emisji CO2 i zminimalizowanie wpływu obiektu na środowisko. Brałem czynny udział w
+                        procesie inwestycyjnym najemców, współpracując z nimi w celu zrozumienia ich potrzeb i celów, a
+                        następnie koordynując i nadzorując realizację ich projektów inwestycyjnych. Zarządzanie
+                        najemcami i zapewnienie ich satysfakcji było jednym z moich głównych zadań. Budowałem i
+                        utrzymywałem solidne relacje z najemcami, zapewniając im odpowiednie wsparcie, rozwiązując
+                        problemy i dbając o ich potrzeby. Zarządzanie i nadzorowanie wszystkich codziennych czynności
+                        niezbędnych do utrzymania nieruchomości było istotnym elementem mojej roli. Dbałem o zapewnienie
+                        regularnej konserwacji, przeglądów i napraw, aby zapewnić ciągłość działania i długoterminową
+                        trwałość obiektu. </li>
                     <!-- <li>Zarządzanie techniczne centrum handlowym</li>
                     <li>Zarządzanie kosztami - opex/capex</li>
                     <li>Zapewnienie zgodności i realizacji inicjatyw na rzecz zrównoważonego rozwoju</li>
@@ -136,15 +169,21 @@
                 <h3 class="title_company">Property manager - <span>Cushman & Wakefield</span> </h3>
                 <p class="time">czerwiec 2019 - grudzień 2020</p>
                 <p>
-                <ul><li>Jako osoba odpowiedzialna za techniczne zarządzanie i administrację budynku biurowego, pełniłem rolę kluczową w utrzymaniu operacyjności i funkcjonalności obiektu. Zarządzałem i nadzorowałem wszystkie codzienne czynności niezbędne do prawidłowego funkcjonowania nieruchomości, zapewniając zadowolenie najemców oraz minimalizując przestoje i opóźnienia.
-
-                    Zajmowałem się również raportowaniem miesięcznym i kwartalnym, dostarczając szczegółowych informacji o zarządzaniu budynkiem, najemcach, wykorzystaniu przestrzeni oraz kosztach operacyjnych i kapitałowych (opex/capex).
-                    
-                    Ważną częścią mojej roli było zapewnienie zgodności z wszelkimi regulacjami i inicjatywami na rzecz zrównoważonego rozwoju. Zajmowałem się rozwiązywaniem wszelkich problemów i skarg związanych z zarządzaniem budynkiem, dążąc do szybkiego i efektywnego ich rozwiązania, aby zapewnić ciągłość działania obiektu.
-                    
-                    Brałem aktywny udział w procesie inwestycyjnym najemców, koordynując i nadzorując realizację projektów, od fazy planowania do realizacji. 
-                    
-                    Dodatkowo, moje obowiązki obejmowały rozwijanie budżetów opłat za usługi i wydatków inwestycyjnych, dbając o optymalne wykorzystanie zasobów oraz kontrolę kosztów.</li>
+                <ul>
+                    <li>Jako osoba odpowiedzialna za techniczne zarządzanie i administrację budynku biurowego, pełniłem
+                        rolę kluczową w utrzymaniu operacyjności i funkcjonalności obiektu. Zarządzałem i nadzorowałem
+                        wszystkie codzienne czynności niezbędne do prawidłowego funkcjonowania nieruchomości,
+                        zapewniając zadowolenie najemców oraz minimalizując przestoje i opóźnienia. Zajmowałem się
+                        również raportowaniem miesięcznym i kwartalnym, dostarczając szczegółowych informacji o
+                        zarządzaniu budynkiem, najemcach, wykorzystaniu przestrzeni oraz kosztach operacyjnych i
+                        kapitałowych (opex/capex). Ważną częścią mojej roli było zapewnienie zgodności z wszelkimi
+                        regulacjami i inicjatywami na rzecz zrównoważonego rozwoju. Zajmowałem się rozwiązywaniem
+                        wszelkich problemów i skarg związanych z zarządzaniem budynkiem, dążąc do szybkiego i
+                        efektywnego ich rozwiązania, aby zapewnić ciągłość działania obiektu. Brałem aktywny udział w
+                        procesie inwestycyjnym najemców, koordynując i nadzorując realizację projektów, od fazy
+                        planowania do realizacji. Dodatkowo, moje obowiązki obejmowały rozwijanie budżetów opłat za
+                        usługi i wydatków inwestycyjnych, dbając o optymalne wykorzystanie zasobów oraz kontrolę
+                        kosztów.</li>
                     <!-- <li>Odpowiedzialny za techniczne zarządzanie i administrację budynku biurowego,</li>
                     <li>Zarządzanie i nadzorowanie wszystkich codziennych czynności niezbędnych do utrzymania
                         nieruchomości, </li>
@@ -157,7 +196,8 @@
                     <li>Rozwój budżetów opłat za usługi i wydatki inwestycyjne.</li> -->
                 </ul>
                 </p>
-                <h3 class="title_company">Property Facilities Manager - <span>Magnus Facility Manager sp z o.o.</span> </h3>
+                <h3 class="title_company">Property Facilities Manager - <span>Magnus Facility Manager sp z o.o.</span>
+                </h3>
                 <p class="time">sierpień 2017 - maj 2019</p>
                 <p>
                 <ul>
