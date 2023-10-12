@@ -1,22 +1,24 @@
-'use strict';
+"use strict";
 let loggedIn = false;
+const loginForm = document.getElementById("loginForm");
 
-function login(form) {
-	const username = form.username.value;
-	const password = form.password.value;
+const login = "ptyc";
+const password = "ptyc1@3";
 
-	if(username === 'ptyc' && password === 'ptyc1@3') {
-		loggedIn = true;
-		document.getElementById('loginForm').style.display = 'none';
-	} else {
-		document.getElementById('errorDiv').style.display = 'block';
-	}
+const loginInput = document.getElementById("username");
+const passwordInput = document.getElementById("password");
 
-	return false;
+const pl = document.getElementById("pl");
+const eng = document.getElementById("eng");
+
+const loginButton = document.getElementById("loginButton");
+
+function btn() {
+  loginButton.addEventListener("click", function () {
+    loginForm.style.display = "none";
+  });
 }
 
-document.body.addEventListener('click', function() {
-	if (!loggedIn) {
-		document.getElementById('content').innerHTML = '';
-	}
-}, true);
+if (loginInput.value == login) {
+  btn();
+}
