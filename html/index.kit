@@ -16,44 +16,13 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/dist/css/style.min.css" />
-    <style>
-      #loginForm {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.95);
-        /* Czarny półprzezroczysty tło */
-        z-index: 9999;
-        /* Wyświetla formularz nad innymi elementami */
-      }
-
-      #loginForm form {
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: var(--color-1);
-        padding: 40px;
-        border-radius: 10px;
-      }
-
-      #errorDiv {
-        color: red;
-        display: none;
-      }
-    </style>
+    <link rel="stylesheet" href="/dist/css/loginForm.min.css" />
   </head>
 
   <body class="body">
     <div id="loginForm">
       <form onsubmit="return login(this)">
-        <label
-          for="username"
-          style="color: white; font-size: 2rem; margin: 1rem; padding: 1rem"
-          >Login:</label
-        ><br />
+        <label for="username">Login:</label><br />
         <input
           type="text"
           id="username"
@@ -71,22 +40,14 @@
           name="password"
           style="font-size: 2rem; margin: 2rem"
         /><br />
-        <div style="display: inline-block">
-          <div style="display: block; flex-direction: row">
-            <input type="checkbox" name="pl" id="pl" />
-            <p
-              style="color: white; font-size: 2rem; margin: 1rem; padding: 1rem"
-            >
-              pl
-            </p>
+        <div style="display: flex">
+          <div class="checkbox">
+            <input type="checkbox" name="pl" id="pl" checked />
+            <p>pl</p>
           </div>
-          <div>
+          <div class="checkbox">
             <input type="checkbox" name="eng" id="eng" />
-            <p
-              style="color: white; font-size: 2rem; margin: 1rem; padding: 1rem"
-            >
-              eng
-            </p>
+            <p>eng</p>
           </div>
         </div>
         <div id="errorDiv" style="font-size: 2rem">
@@ -97,313 +58,15 @@
           >
         </div>
         <br />
-        <input
-        id="loginButton"
-          type="submit"
-          value="Zaloguj"
-          style="
-            margin: 2rem;
-            font-size: 2rem;
-            padding: 0.5rem;
-            border-radius: 10px;
-          "
-        />
+
+        <button type="button" id="loginButton">Zaloguj się</button>
       </form>
     </div>
-    <div class="left">
-      <div class="cointeiner photo">
-        <img src="/dist/img/photo.jpg" alt="CV photo" />
-      </div>
-      <div class="right_total">
-        <div class="right_main_title">Kontakt</div>
-        <div class="right_main_info">
-          <i class="fa-solid fa-phone" style="margin: 0 1rem"></i> +48 788 33 62
-          34
-        </div>
-        <div class="right_main_info">
-          <i class="fa-solid fa-at" style="margin: 0 1rem"></i
-          >tyc.pawel@gmail.com
-        </div>
-      </div>
-      <div>
-        <div class="cointeiner base_info">
-          <div class="right_main_skill">Umiejętności</div>
-          <div>
-            <ul>
-              <li>Biegła znajmość środowiska Windows i LINUX</li>
-              <li>Biegła znajmość pakietu OFFICE</li>
-              <li>AutoCAD</li>
-              <li>GIMP</li>
-              <li>Zarządzanie projektami</li>
-              <li>Analiza biznesowa</li>
-              <li>Język angielski - poziom średnio-zaawansowany</li>
-              <li>Licencja zawodowa zarządcy nieruchomości</li>
-              <li>Prawo jazdy kat B</li>
-            </ul>
-            <ul>
-              <li>Umiejętności komputerowe</li>
-              <li>HTML</li>
-              <li>PHP</li>
-              <li>SCSS/CSS</li>
-              <li>JavaScript</li>
-              <li>BootStrap</li>
-              <li>Python</li>
-            </ul>
-          </div>
-          <div class="right_main_title">Umiejętności miękkie</div>
-          <div>
-            <ul>
-              <li>Umiejętność pracy pod presją czasu i odporność na stres</li>
-              <li>Rozwiązywanie konfliktów</li>
-              <li>Logiczne myślenie</li>
-              <li>Duża kreatywność i innowacyjność</li>
-              <li>Komunikatywność i umiejętność pracy w grupie</li>
-              <li>Duża motywacja do pracy</li>
-              <li>świetna organizacja pracy własnej</li>
-              <li>Umiejętnośc szybkiego odnajdywania się w nowym środowisku</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="right">
-      <h1>CV</h1>
-      <p class="property_title">Property Manager</p>
-      <h2>Paweł Tyc</h2>
-      <div class="main_info">
-        <p class="motto">
-          Ambitny, pomysłowy, zaangażowany w projekty z silnymi umiejętnościami
-          organizacyjnymi. Gotowy do pomocy zespołowi w osiągnięciu celów firmy.
-        </p>
-        <div class="work_exp">
-          <div class="title_point">Doświadczenie zawodowe</div>
-          <h3 class="title_company">
-            Manager Centrum Handlowego - <span> I.I.C. Retail sp. z o.o.</span>
-          </h3>
-          <p class="time">marzec 2021 - obecnie</p>
 
-          <ul>
-            <li>
-              Współpracuję blisko z najemcami centrum handlowego, budując i
-              utrzymując trwałe relacje oraz zapewniając szybką odpowiedź na ich
-              potrzeby i rozwiązując ewentualne problemy. Jestem odpowiedzialny
-              za tworzenie budżetów oraz kontrolę ich realizacji. Monitoruję
-              wydatki, przeprowadzam analizy finansowe i wprowadzam korekty w
-              celu optymalizacji kosztów. Realizuję strategię marketingową,
-              planując i koordynując działania promocyjne, reklamowe i
-              sprzedażowe, które zwiększają atrakcyjność centrum handlowego i
-              przyciągają nowych klientów. Zarządzam zespołem pracowników,
-              wspieram rozwój zawodowy członków zespołu, nadzoruję ich pracę i
-              motywuję do osiągnięcia celów. Jako osoba odpowiedzialna za działu
-              FM, dbam o bieżące utrzymanie i zarządzanie infrastrukturą
-              techniczną centrum handlowego. Organizuję przedsięwzięcia
-              marketingowe, tworząc i realizując różnorodne kampanie i eventy
-              mające na celu promocję centrum handlowego. Zajmuję się
-              pozyskiwaniem nowych najemców - aktywnie poszukuję i nawiązuję
-              kontakty z potencjalnymi najemcami, negocjuję warunki najmu oraz
-              zawieram umowy. Biorę udział w prezentacji wolnych powierzchni
-              handlowych dla potencjalnych najemców, pokazując im korzyści
-              płynące z wynajmu przestrzeni w naszym centrum. Negocjuję nowe
-              umowy i renegocjuję obowiązujące, dążąc do jak najbardziej
-              korzystnych warunków dla naszego centrum handlowego. Kreuję
-              pozytywny wizerunek centrum handlowego. Pracuję nad budowaniem
-              silnej marki i reputacji, która przyciąga klientów i najemców.
-            </li>
-          </ul>
-
-          <h3 class="title_company">
-            Kierownik technicznty <span>I.I.C. Retail sp z o.o.</span>
-          </h3>
-          <p class="time">styczeń 2020 - obecnie</p>
-
-          <ul>
-            <li>
-              Jako menedżer techniczny centrum handlowego, miałem na celu
-              zapewnienie niezawodnego i efektywnego funkcjonowania obiektu.
-              Moje obowiązki obejmowały zarządzanie wszystkimi aspektami
-              technicznymi, od konserwacji sprzętu po zarządzanie infrastrukturą
-              i systemami budynku. Przy zarządzaniu kosztami - opex/capex,
-              dbałem o skuteczną kontrolę budżetu, analizę wydatków operacyjnych
-              i kapitałowych, a także optymalizację kosztów zgodnie z planem
-              finansowym. Zapewnienie zgodności i realizacji inicjatyw na rzecz
-              zrównoważonego rozwoju było kluczowym elementem mojej roli.
-              Wdrażałem strategie mające na celu poprawę efektywności
-              energetycznej, redukcję emisji CO2 i zminimalizowanie wpływu
-              obiektu na środowisko. Brałem czynny udział w procesie
-              inwestycyjnym najemców, współpracując z nimi w celu zrozumienia
-              ich potrzeb i celów, a następnie koordynując i nadzorując
-              realizację ich projektów inwestycyjnych. Zarządzanie najemcami i
-              zapewnienie ich satysfakcji było jednym z moich głównych zadań.
-              Budowałem i utrzymywałem solidne relacje z najemcami, zapewniając
-              im odpowiednie wsparcie, rozwiązując problemy i dbając o ich
-              potrzeby. Zarządzanie i nadzorowanie wszystkich codziennych
-              czynności niezbędnych do utrzymania nieruchomości było istotnym
-              elementem mojej roli. Dbałem o zapewnienie regularnej konserwacji,
-              przeglądów i napraw, aby zapewnić ciągłość działania i
-              długoterminową trwałość obiektu.
-            </li>
-           
-          </ul>
-
-          <h3 class="title_company">
-            Property manager - <span>Cushman & Wakefield</span>
-          </h3>
-          <p class="time">czerwiec 2019 - grudzień 2019</p>
-
-          <ul>
-            <li>
-              Jako osoba odpowiedzialna za techniczne zarządzanie i
-              administrację budynku biurowego, pełniłem rolę kluczową w
-              utrzymaniu operacyjności i funkcjonalności obiektu. Zarządzałem i
-              nadzorowałem wszystkie codzienne czynności niezbędne do
-              prawidłowego funkcjonowania nieruchomości, zapewniając zadowolenie
-              najemców oraz minimalizując przestoje i opóźnienia. Zajmowałem się
-              również raportowaniem miesięcznym i kwartalnym, dostarczając
-              szczegółowych informacji o zarządzaniu budynkiem, najemcach,
-              wykorzystaniu przestrzeni oraz kosztach operacyjnych i
-              kapitałowych (opex/capex). Ważną częścią mojej roli było
-              zapewnienie zgodności z wszelkimi regulacjami i inicjatywami na
-              rzecz zrównoważonego rozwoju. Zajmowałem się rozwiązywaniem
-              wszelkich problemów i skarg związanych z zarządzaniem budynkiem,
-              dążąc do szybkiego i efektywnego ich rozwiązania, aby zapewnić
-              ciągłość działania obiektu. Brałem aktywny udział w procesie
-              inwestycyjnym najemców, koordynując i nadzorując realizację
-              projektów, od fazy planowania do realizacji. Dodatkowo, moje
-              obowiązki obejmowały rozwijanie budżetów opłat za usługi i
-              wydatków inwestycyjnych, dbając o optymalne wykorzystanie zasobów
-              oraz kontrolę kosztów.
-            </li>
-            
-          </ul>
-
-          <h3 class="title_company">
-            Property Facilities Manager -
-            <span>Magnus Facility Manager sp z o.o.</span>
-          </h3>
-          <p class="time">sierpień 2017 - maj 2019</p>
-
-          <ul>
-            <li>
-              Zarządzanie nieruchomościami. Sporządzanie bieżących i okresowych
-              raportów, analiz dla Właściciela Nieruchomości. Przygotowanie
-              budżetów OpEX oraz CaPex, analiza kosztów. Kontrola nad
-              przychodami z nieruchomości. Aktywne zarządzanie spływem
-              należności, gwarancjami, ubezpieczeniami. Bieżący kontakt z
-              Najemcami i Właścicielem Nieruchomości. Nadzór nad codziennym
-              funkcjonowaniem nieruchomości. Współpraca z kontrahentami w celu
-              spełnienia oczekiwań Najemców i Właściciela Nieruchomości.
-              Reprezentowanie Właściciela Nieruchomości we wszystkich sprawach
-              związanych z nieruchomością. Weryfikacja dokumentacji
-              formalno–prawnej oraz technicznej dotyczącej nieruchomości.
-              Organizacja przetargów na serwisy i usługi. Nadzór nad służbami
-              administracyjnymi oraz technicznymi. Organizacja prac
-              adaptacyjnych i remontowych (określanie zakresu prac, przetarg,
-              negocjacje, wybór wykonawcy i nadzór nad pracami).
-            </li>
-          </ul>
-
-          <h3 class="title_company">
-            Zarządca nieruchomości - <span>Grupa Managment 24 sp. z o.o.</span>
-          </h3>
-          <p class="time">styczeń 2016 - sierpień 2017</p>
-
-          <ul>
-            <li>
-              Grupa Managment 24 – zarządca nieruchomości powierzchni biurowej
-              55 000 m2,powierzchnia centrum logistycznego 17 000
-              m2,powierzchnia rezydencji mieszkaniowej 10 000 m2 - nadzór nad
-              pionem technicznym w firmie, koordynowanie prac serwisów
-              zewnętrznych w kompleksie biurowców klasy AA, koordynowanie prac
-              serwisów wewnętrznych, negocjowanie umów serwisowych,
-              optymalizacja budżetu działu, stały kontakt z rezydentami oraz
-              identyfikacja ich potrzeb. Przeprowadzanie szkoleń dla nowych
-              pracowników oraz motywowanie podległego personelu technicznego,
-              zatrudnianie i kontrola wynagrodzeń zatrudnionego personelu
-              wykonawczego, rekomendowanie zmian i redukcja kosztów. Aranżacja
-              powierzchni biurowych dostosowana do aktualnych potrzeb
-              rezydentów, koordynacja prac aranżacyjnych, rozliczanie oraz
-              nadzór pracy serwisów. Dbanie o należyte i zgodnie ze sztuką
-              wykonanie prac aranżacyjnych zgodnie z terminem ustalonym z
-              rezydentem. Przekazywanie frontu robót remontowo-budowlanych oraz
-              odbieranie wykonanej pracy. Pozyskiwanie firm zewnętrznych na
-              potrzeby prawidłowego funkcjonowania biurowców oraz negocjacje
-              umów serwisowych. Renegocjacje umów serwisowych oraz umów za
-              media. Nadzorowanie prac budowlanych w centrum logistycznym mające
-              na celu zapewnienie ciągłości prac centrum podczas rozbudowy
-              powierzchni magazynowej.
-            </li>
-          </ul>
-
-          <h3 class="title_company">
-            Administrator nieruchomości - <span>Olivia Business Centre</span>
-          </h3>
-          <p class="time">sierpień 2012 - grudzień 2015</p>
-
-          <ul>
-            <li>
-              Olivia Business Centre, administrator nieruchomości o powierzchni
-              80 000 m2 - nadzór nad pionem technicznym w firmie, koordynowanie
-              prac serwisów zewnętrznych w kompleksie biurowców klasy AA,
-              koordynowanie prac serwisów wewnętrznych, negocjowanie umów
-              serwisowych, optymalizacja budżetu działu, stały kontakt z
-              rezydentami oraz identyfikacja ich potrzeb. Przeprowadzanie
-              szkoleń dla nowych pracowników oraz motywowanie podległego
-              personelu technicznego, zatrudnianie i kontrola wynagrodzeń
-              zatrudnionego personelu wykonawczego, rekomendowanie zmian i
-              redukcja kosztów. Aranżacja powierzchni biurowych dostosowana do
-              aktualnych potrzeb rezydentów, koordynacja prac aranżacyjnych,
-              rozliczanie oraz nadzór pracy serwisów. Dbanie o należyte i
-              zgodnie ze sztuką wykonanie prac aranżacyjnych zgodnie z terminem
-              ustalonym z rezydentem. Przekazywanie frontu robót
-              remontowo-budowlanych oraz odbieranie wykonanej pracy.
-              Pozyskiwanie firm zewnętrznych na potrzeby prawidłowego
-              funkcjonowania biurowców oraz negocjacje umów serwisowych.
-              Renegocjacje umów serwisowych oraz umów za media. Równoczasowo
-              administracja obiektem posiadającym status budynku zabytkowego o
-              powierzchni 5 000 m2 , przeprowadzanie procedury przetargowej na
-              prace modernizacyjno-remontowo-naprawczych, określanie zakresu
-              prac niezbędnych w celu utrzymania należytego stanu budynku,
-              planowanie i rozliczanie budżetu remontów. Uzyskiwanie zgód
-              administracyjnych na przeprowadzanie prac remontowych.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="school">
-        <h3>Edukacja</h3>
-        <h3 class="school_main">
-          Wyższa Szkoła Finansów i Prawa w <span>Bielsku-Białej</span>
-        </h3>
-        <p class="school_title">
-          Wydział: Bankowość i Finanse Kierunek: Gospodarka nieruchomościami
-          Specjalizacja: Rzeczoznawca majątkowy Stopień: magister
-        </p>
-        <p class="school_time">wrzesień 2010 - czerwiec 2012</p>
-        <h3 class="school_main">
-          Wyższa Szkoła Finansów i Prawa w <span>Bielsku-Białej</span>
-        </h3>
-        <p class="school_title">
-          Wydział: Bankowość i Finanse Kierunek: Gospodarka Nieruchomościami
-          Specjalizacja: Zarządca w obrocie nieruchomości Stopień: licencjat
-        </p>
-        <p class="school_time">wrzesień 2009 - czerwiec 2010</p>
-        <h3 class="school_main">
-          Wyższa Szkoła Finansów i Prawa w <span>Bielsku-Białej</span>
-        </h3>
-        <p class="school_title">
-          Wydział: Bankowość i Finanse Kierunek: Gospodarka nieruchomościami
-          Specjalizacja: Pośrednik w obrocie nieruchomości Stopień: licencjat
-        </p>
-        <p class="school_time">wrzesień 2009 - czerwiec 2010</p>
-      </div>
-    </div>
     <footer class="footer">
-      <p>
-        Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb
-        procesu rekrutacji zgodnie z ustawą z dnia 27.08.1997r. Dz. U. z 2002
-        r., Nr 101, poz. 926 ze zm. wraz z późniejszymi zmianami.
-      </p>
+      <p>uroboros.online <span id="year"></span></p>
     </footer>
     <script src="/dist/js/script.min.js"></script>
+    <script src="/dist/js/footer.min.js"></script>
   </body>
 </html>
