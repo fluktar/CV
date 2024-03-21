@@ -1,5 +1,6 @@
 "use strict";
 let loggedIn = false;
+
 const loginForm = document.getElementById("loginForm");
 
 const login = "ptyc";
@@ -46,4 +47,17 @@ function showLoginForm() {
   });
 }
 
+function checkCheckboxStatePl() {
+  if (pl.checked) {
+    eng.checked = false;
+  }
+}
+function checkCheckboxStateEng() {
+  if (eng.checked) {
+    pl.checked = false;
+  }
+}
+
 loginButton.addEventListener("click", showLoginForm);
+pl.addEventListener("click", checkCheckboxStatePl);
+eng.addEventListener("click", checkCheckboxStateEng);
