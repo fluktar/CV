@@ -1,6 +1,7 @@
 # Ignorowane pliki i foldery
 	node_modules/
 	src/
+	src/php/
 	html/
 	gulpfile.mjs
 	package.json

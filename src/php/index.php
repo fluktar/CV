@@ -13,34 +13,7 @@
      <link rel="stylesheet" href="/dist/css/style.min.css" />
      <link rel="stylesheet" href="/dist/css/loginForm.min.css" />
  </head>
- <?php
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $username_name = 'ptyc';
-        $password_name = 'ptyc123';
-        if (isset($_POST['pl'])) {
-            if ($username === $username_name && $password === $password_name) {
-                header("Location: pl.html");
-                exit;
-            }
-            // 'pl' checkbox is selected
-        } elseif (isset($_POST['eng'])) {
-            if ($username === $username_name && $password === $password_name) {
-                header("Location: eng.html");
-                exit;
-            }
-            // 'eng' checkbox is selected
-        } else {
-            // ...
-
-            // No checkbox is selected
-        }
-        // Do something with the username and password
-    }
-
-    ?>
 
  <body class="body">
      <div id="loginForm">
@@ -59,14 +32,14 @@
                      <p>eng</p>
                  </div>
              </div>
-             <div id="errorDiv" style="font-size: 2rem">
+             <div id="errorDiv" style="font-size: 2rem; ">
                  Niepoprawny login. Proszę skontaktować się z właścicielem strony pod
                  adresem <br />
                  <span style="font-size: 2.5rem; margin: 2rem; padding: 2rem">tyc.pawel@gmail.com</span>
              </div>
              <br />
 
-             <button type="button" id="loginButton">Zaloguj się</button>
+             <button type="submit" id="loginButton">Zaloguj się</button>
          </form>
      </div>
 

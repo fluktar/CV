@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ruleset name="MyProject">
+  <description>PHP CodeSniffer configuration for MyProject</description>
+
+  <!-- Paths to check -->
+  <file>e:\programowanie\cv\src\php</file>
+  <!-- Check that displays "Hello World" in the console -->
+  <rule ref="Generic.Files.InlineHTML.Found">
+    <properties>
+      <property name="error" value="warning"/>
+      <property name="message" value="Hello World"/>
+    </properties>
+  </rule>
+  <!-- Exclude specific files/folders -->
+  <!-- <exclude-pattern>*/tests/*</exclude-pattern> -->
+
+  <!-- Define the coding standard -->
+  <arg name="standard" value="PSR2"/>
+
+  <!-- Show progress -->
+  <arg value="p"/>
+</ruleset>
