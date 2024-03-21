@@ -1,2 +1,4 @@
+
+
 <?php
-show_source("index.html");
+include 'index.html';
