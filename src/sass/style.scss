@@ -145,6 +145,9 @@ body {
     .school_title {
       margin: 0 3rem;
       font-size: 1.4rem;
+      &:last-of-type {
+        margin-bottom: 2rem;
+      }
     }
     .school_time {
       color: var(--motto);
