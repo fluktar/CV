@@ -23,24 +23,10 @@
     <div id="loginForm">
       <form onsubmit="return login(this)">
         <label for="username">Login:</label><br />
-        <input
-          type="text"
-          id="username"
-          name="username"
-          style="font-size: 2rem; margin: 2rem"
-        /><br />
-        <label
-          for="password"
-          style="color: white; font-size: 2rem; margin: 1rem; padding: 1rem"
-          >Hasło:</label
-        ><br />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          style="font-size: 2rem; margin: 2rem"
-        /><br />
-        <div style="display: flex">
+        <input type="text" id="username" name="username" /><br />
+        <label for="password">Hasło:</label><br />
+        <input type="password" id="password" name="password" /><br />
+        <div class="checkbox_decision">
           <div class="checkbox">
             <input type="checkbox" name="pl" id="pl" checked />
             <p>pl</p>
@@ -50,12 +36,10 @@
             <p>eng</p>
           </div>
         </div>
-        <div id="errorDiv" style="font-size: 2rem">
+        <div id="errorDiv">
           Niepoprawny login. Proszę skontaktować się z właścicielem strony pod
           adresem <br />
-          <span style="font-size: 2.5rem; margin: 2rem; padding: 2rem"
-            >tyc.pawel@gmail.com</span
-          >
+          <span>tyc.pawel@gmail.com</span>
         </div>
         <br />
 
