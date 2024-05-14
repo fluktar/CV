@@ -18,6 +18,12 @@ const eng = document.getElementById("eng");
 
 const loginButton = document.getElementById("loginButton");
 
+const x_close = document.getElementsByClassName("x-close")[0];
+
+function addDisplayNone() {
+  errorDiv.style.display = "none";
+}
+
 function showLoginForm() {
   if (loginInput.value === login && passwordInput.value === password) {
     loggedIn = true;
@@ -61,3 +67,4 @@ function checkCheckboxStateEng() {
 loginButton.addEventListener("click", showLoginForm);
 pl.addEventListener("click", checkCheckboxStatePl);
 eng.addEventListener("click", checkCheckboxStateEng);
+x_close.addEventListener("click", addDisplayNone);

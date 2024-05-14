@@ -14,10 +14,10 @@ body {
       margin: 2rem;
 
       padding: 2rem;
-      background-color: #333;
+      background-color: #0759fc;
       border-radius: 1rem;
-      box-shadow: 0 0 1rem 0.5rem #000;
-      border: none;
+      box-shadow: 0 0 1rem 0rem #0759fc;
+      border: 1px solid white;
       label {
         color: white;
         font-size: 2rem;
@@ -28,16 +28,17 @@ body {
         margin: 1rem;
         padding: 1rem;
         border-radius: 10px;
-        border: none;
-        background-color: #444;
+        border: 0;
+        background-color: #0759fc;
         color: white;
         font-size: 2rem;
-        box-shadow: 0 0 0.1rem 0.1rem #000;
+        box-shadow: 0 0 0.1rem 0.1rem #0548cfd2;
         transition: all 0.3s ease-in-out;
         &:focus {
-          background-color: #555;
+          background-color: #0548cfd2;
           transform: scale(1.1);
-          box-shadow: 0 0 0.1rem 0.1rem #000;
+          box-shadow: 0 0 1rem 0rem #0548cf91;
+          border: none;
         }
       }
       .checkbox_decision {
@@ -61,14 +62,16 @@ body {
       padding: 1rem;
       border-radius: 10px;
       border: none;
-      background-color: #333;
-      box-shadow: 0 0 0.1rem 0.1rem #000;
+      background-color: #0548cfd2;
+      box-shadow: 0 0 0.1rem 0.1rem #0548cfd2;
       transition: all 0.3s ease-in-out;
       &:hover {
-        background-color: #8a8a8a;
+        background-color: #0055ff;
+        color: white;
+        border: none;
         transform: scale(1.1);
         cursor: pointer;
-        box-shadow: inset 0 0 0.1rem 0.1rem #000;
+        box-shadow: inset 0 0 0.1rem 0.1rem #0548cfd2;
       }
     }
     .checkbox {
@@ -88,7 +91,46 @@ body {
 
     #errorDiv {
       display: none;
-      color: red;
+      color: rgba(255, 255, 255, 0.837);
+      font-size: 2rem;
+      position: absolute;
+      z-index: 100;
+      background-color: #0548cfc8;
+      box-shadow: 0 0 1rem 0rem #0759fc;
+      border-radius: 10px;
+      margin: 2rem;
+      padding: 2rem;
+      .popup_msn {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 1rem;
+        .x-close {
+          display: grid;
+          grid-column: 2/-1;
+          grid-row: 1/3;
+
+          justify-content: end;
+          font-size: 5rem;
+          width: 100%;
+          height: 100%;
+          font-size: 2rem;
+          color: white;
+          cursor: pointer;
+          p {
+            font-size: 3rem;
+          }
+        }
+        p {
+          grid-column: 1/2;
+          grid-row: 1/3;
+        }
+        span {
+          grid-column: 1/2;
+          grid-row: 3/-1;
+          font-weight: bold;
+        }
+      }
     }
   }
 }
