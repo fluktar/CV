@@ -1,135 +1,103 @@
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
 
-  #loginForm {
-    display: flex;
-    margin: auto;
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0rem rgba(0, 0, 0, 0.1);
 
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 2rem;
+  label,
+  input,
+  button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 
-      padding: 2rem;
-      background-color: #0759fc;
-      border-radius: 1rem;
-      box-shadow: 0 0 1rem 0rem #0759fc;
-      border: 1px solid white;
-      label {
-        color: white;
-        font-size: 2rem;
-        margin: 1rem;
-        padding: 1rem;
-      }
-      input {
-        margin: 1rem;
-        padding: 1rem;
-        border-radius: 10px;
-        border: 0;
-        background-color: #0759fc;
-        color: white;
-        font-size: 2rem;
-        box-shadow: 0 0 0.1rem 0.1rem #0548cfd2;
-        transition: all 0.3s ease-in-out;
-        &:focus {
-          background-color: #0548cfd2;
-          transform: scale(1.1);
-          box-shadow: 0 0 1rem 0rem #0548cf91;
-          border: none;
-        }
-      }
-      .checkbox_decision {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 1rem;
-        padding: 1rem;
-        input {
-          margin: 1rem;
-        }
-        p {
-          color: white;
-          font-size: 2rem;
-        }
-      }
+  label {
+    color: #333;
+    font-size: 1rem;
+  }
+
+  input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #0759fc;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    position: relative;
+    z-index: 5;
+
+    &:hover {
+      background-color: #0548cf;
+
+      z-index: 6;
     }
-    button {
-      margin: 2rem;
-      font-size: 2rem;
-      padding: 1rem;
-      border-radius: 10px;
-      border: none;
-      background-color: #0548cfd2;
-      box-shadow: 0 0 0.1rem 0.1rem #0548cfd2;
-      transition: all 0.3s ease-in-out;
-      &:hover {
-        background-color: #0055ff;
-        color: white;
-        border: none;
-        transform: scale(1.1);
-        cursor: pointer;
-        box-shadow: inset 0 0 0.1rem 0.1rem #0548cfd2;
-      }
-    }
-    .checkbox {
+  }
+
+  #errorDiv {
+    display: none;
+    color: #f00;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    .x-close {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
       margin: 1rem;
-      padding: 1rem;
-      input {
-        margin: 1rem;
+      cursor: pointer;
+      span {
+        display: inline-block;
+        font-size: 1.5rem;
+        animation: x_close 2s ease-in-out infinite;
       }
-      p {
-        color: white;
-        font-size: 2rem;
+
+      @keyframes x_close {
+        0% {
+          opacity: 0;
+          transform: scale(1.2);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.4);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(1.2);
+        }
       }
     }
+  }
 
-    #errorDiv {
-      display: none;
-      color: rgba(255, 255, 255, 0.837);
-      font-size: 2rem;
-      position: absolute;
-      z-index: 100;
-      background-color: #0548cfc8;
-      box-shadow: 0 0 1rem 0rem #0759fc;
-      border-radius: 10px;
-      margin: 2rem;
-      padding: 2rem;
-      .popup_msn {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 1rem;
-        .x-close {
-          display: grid;
-          grid-column: 2/-1;
-          grid-row: 1/3;
-
-          justify-content: end;
-
-          width: 100%;
-          height: 100%;
-
-          color: white;
-          cursor: pointer;
-          p {
-            font-size: 3rem;
-          }
-        }
-        p {
-          grid-column: 1/2;
-          grid-row: 1/3;
-        }
-        span {
-          grid-column: 1/2;
-          grid-row: 3/-1;
-          font-weight: bold;
-        }
+  .checkbox_decision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .checkbox {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      p {
+        font-size: 1rem;
       }
     }
   }
