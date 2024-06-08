@@ -189,33 +189,45 @@ html {
     justify-content: center;
   }
   .property_title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin: 0 3rem;
     font-weight: bold;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     display: flex;
     margin: 1rem 3rem;
   }
   .main_info {
     .motto {
       color: var(--motto);
-      font-size: 1rem;
+      font-size: 1.7rem;
       margin: 0 3rem;
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
     }
     .title_point {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       margin: 0.5rem 3rem;
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
     }
     .title_company {
-      font-size: 1.3rem;
+      font-size: 1.6rem;
       margin: 0.4rem 3rem;
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
       span {
         color: var(--selection);
       }
     }
     .time {
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
       color: var(--motto);
       font-size: 1.2rem;
       margin: 0.5rem 3rem;
@@ -224,10 +236,13 @@ html {
     ul {
       list-style: none;
       li {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: 300;
         margin: 0.3rem 6rem;
         text-align: justify;
+        @include respond(tab-port) {
+          font-size: 2.5rem;
+        }
       }
       li:before {
         content: "•";
@@ -241,9 +256,15 @@ html {
       font-size: 1.5rem;
       font-weight: 400;
       margin: 0.5rem 3rem;
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
     }
     .school_main {
       font-weight: bold;
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
       span {
         color: var(--selection);
       }
@@ -251,6 +272,9 @@ html {
     .school_title {
       margin: 0 3rem;
       font-size: 1.4rem;
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
       &:last-of-type {
         margin-bottom: 2rem;
       }
