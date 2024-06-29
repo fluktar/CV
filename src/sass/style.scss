@@ -132,7 +132,8 @@ html {
         grid-row: 2/3;
       }
     }
-    .right_main_skill {
+    .right_main_skill,
+    p {
       font-size: 1.5rem;
       margin: 1rem;
       color: var(--text-color2);
@@ -143,6 +144,7 @@ html {
     }
     ul {
       list-style: none;
+
       li {
         margin: 0.5rem 2rem;
         font-size: 1rem;
@@ -235,6 +237,7 @@ html {
 
     ul {
       list-style: none;
+
       li {
         font-size: 1.5rem;
         font-weight: 300;
