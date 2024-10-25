@@ -113,12 +113,12 @@ html {
       color: var(--text-color2);
     }
     .right_main_info {
-      @include respond(tab-port) {
-        font-size: 3.2rem;
-      }
       margin: 1rem;
       font-size: 1.5rem;
       color: var(--text-color2);
+      @include respond(tab-port) {
+        font-size: 3.2rem;
+      }
     }
   }
   .base_info {
@@ -148,10 +148,10 @@ html {
       li {
         margin: 0.5rem 2rem;
         font-size: 1rem;
+        color: var(--text-color2);
         @include respond(tab-port) {
           font-size: 1.75rem;
         }
-        color: var(--text-color2);
       }
       li:before {
         content: "•";
@@ -177,13 +177,14 @@ html {
   }
 }
 .right {
+  width: 60vw;
+  box-shadow: 2px 2px 4px rgba($color: #6d6a6a, $alpha: 0.3);
   @include respond(tab-port) {
     width: 100%;
     grid-row: 2/2;
     grid-column: 1/-1;
   }
-  width: 60vw;
-  box-shadow: 2px 2px 4px rgba($color: #6d6a6a, $alpha: 0.3);
+
   h1 {
     font-size: 2.4rem;
     margin: 3rem;
@@ -227,12 +228,12 @@ html {
       }
     }
     .time {
-      @include respond(tab-port) {
-        font-size: 2.5rem;
-      }
       color: var(--motto);
       font-size: 1.2rem;
       margin: 0.5rem 3rem;
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
     }
 
     ul {
